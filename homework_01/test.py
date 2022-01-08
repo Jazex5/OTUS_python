@@ -2,8 +2,8 @@ import numpy
 
 
 def power_numbers(*args):
-    spisok = list(numpy.array(args)**2)
-    return(spisok)
+    print(list(numpy.array(args)**2))
+
 
 power_numbers(5,6,10)
 

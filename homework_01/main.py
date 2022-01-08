@@ -15,8 +15,8 @@ def power_numbers(*args):
     <<< [1, 4, 25, 49]
     """
 
-    spisok = list(numpy.array(args) ** 2)
-    return(spisok)
+    return(list(numpy.array(args) ** 2))
+
 
 power_numbers([1, 2, 5, 7])
 
