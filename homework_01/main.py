@@ -20,13 +20,13 @@ def power_numbers(*args):
 
 power_numbers([1, 2, 5, 7])
 
-# filter types
-# ODD = "odd"
-# EVEN = "even"
-# PRIME = "prime"
-#
-#
-#def filter_numbers():
+filter types
+ODD = "odd"
+EVEN = "even"
+PRIME = "prime"
+
+
+def filter_numbers():
     """
     функция, которая на вход принимает список из целых чисел,
     и возвращает только чётные/нечётные/простые числа
