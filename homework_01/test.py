@@ -4,7 +4,7 @@ def power_numbers(*args):
     print(list(numpy.array(args)**2))
 
 
-power_numbers(5,6,10)
+power_numbers(1, 2, 5, 7)
 
 
 # #filter types

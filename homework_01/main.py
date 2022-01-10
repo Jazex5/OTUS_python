@@ -20,7 +20,7 @@ def power_numbers(*args):
 
 power_numbers([1, 2, 5, 7])
 
-filter types
+#filter types
 ODD = "odd"
 EVEN = "even"
 PRIME = "prime"
