@@ -1,28 +1,17 @@
 import numpy
 
-# def power_numbers(*args):
-#     print(list(numpy.array(args)**2))
-#
-#
-# power_numbers(5,6,10)
+def power_numbers(*args):
+    print(list(numpy.array(args)**2))
+
+
+power_numbers(5,6,10)
 
 
 # #filter types
 ODD = "odd"
 EVEN = "even"
 PRIME = "prime"
-# x=[]
-#
-# def filter_numbers(*args, type):
-#  #   kwargs = {"odd": ODD, "even": EVEN, "prime": PRIME}
-#     if kwargs=='odd':
-#          for i in args:
-#             if i%2==0:
-#                 x.append(i)
-# print(x)
-#
-# filter_numbers([4,5,6,9], ODD)
-#
+
 numbers = [1, 2, 4, 5, 7, 8, 10, 11, 3]
 
 
@@ -33,17 +22,14 @@ def filter_even_num(in_num):
     else:
         return False
 
-
-def filter_odd_num(in_num):
-    if (in_num % 2) == 0:
+# функция, которая фильтрует четные числа
+def filter_odd_num(args):
+    if (args % 2) == 0:
         return False
     else:
         return True
 
-
-# out_filter = filter(filter_odd_num, numbers)
-# print("Отфильтрованный список: ", list(out_filter))
-
+# функция, которая фильтрует натуральные числа
 def is_prime(in_num):
     k = 0
     if in_num >= 2:
@@ -69,26 +55,20 @@ def is_prime(in_num):
 #     return False
 
 
-# def filter_numbers(*args, type="none"):
-#     if filter_numbers(type) == ODD:
-#         out_filter = filter(filter_odd_num, args)
-#         print("Отфильтрованный список: ", list(out_filter))
-#     elif filter_numbers(type) == "even":
-#         out_filter = filter(filter_even_num, args)
-#         print("Отфильтрованный список: ", list(out_filter))
-#     elif filter_numbers(type) == "prime":
-#         out_filter = filter(is_prime, args)
-#         print("Отфильтрованный список: ", list(out_filter))
-#
-# filter_numbers([1, 2, 4, 5, 7, 8, 10, 11, 3], ODD)
-def filter_numbers(*args):
-    out_filter = filter(filter_odd_num, args)
-    print("Отфильтрованный список: ", list(out_filter))
-filter_numbers(1, 2, 4, 5, 7, 8, 10, 11, 3)
+def filter_numbers(*args, t):
+      if t is ODD:
+        out_filter = filter(filter_odd_num, args)
+        print("Отфильтрованный список: ", list(out_filter))
+      elif t is EVEN:
+          out_filter = filter(filter_even_num, args)
+          print("Отфильтрованный список: ", list(out_filter))
+      elif t is PRIME:
+          out_filter = filter(is_prime, args)
+          print("Отфильтрованный список: ", list(out_filter))
 
-# out_filter = filter(is_prime, numbers)
-# out_filter = filter(filter_even_num, numbers)
-# out_filter = filter(filter_odd_num, numbers)
+
+filter_numbers(2, 3, 4, 5, t=EVEN)
+
 
 #     """
 #     функция, которая на вход принимает список из целых чисел,
